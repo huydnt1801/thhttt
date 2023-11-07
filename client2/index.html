@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Client 2</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script src="https://cdn.jsdelivr.net/npm/keycloak-js@22.0.4/dist/keycloak.min.js"></script>
+  <meta name="referrer" content="strict-origin-when-cross-origin" />
+</head>
+
+<body class="">
+  <button id="logout">Logout</button>
+  <button id="login">Login</button>
+  <button id="register">Register</button>
+  <script>
+    const initKeycloak = async () => {
+      const keycloak = new Keycloak({
+        url: "http://localhost:8080/",
+        realm: "sso-tenant",
+        clientId: "client2",
+      });
+
+      try {
+        const authenticated = await keycloak.init({
+          onLoad: 'check-sso',
+          redirectUri: "http://localhost:3001",
+        });
+        if (keycloak.authenticated) {
+          console.log(keycloak);
+          const token = keycloak.token;
+          const refToken = keycloak.refreshToken;
+        }
+        console.log(
+          `User is ${authenticated ? "authenticated" : "not authenticated"}`
+        );
+        return keycloak;
+      } catch (error) {
+        console.error("Failed to initialize adapter:", error);
+      }
+    };
+    initKeycloak().then((keycloak) => {
+      console.log("init keycloak successfully", keycloak);
+      document.getElementById("logout").onclick = keycloak.logout;
+      document.getElementById("login").onclick = keycloak.login;
+      document.getElementById("register").onclick = keycloak.register;
+    });
+  </script>
+</body>
+
+</html>

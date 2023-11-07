@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Client 1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://cdn.jsdelivr.net/npm/keycloak-js@22.0.4/dist/keycloak.min.js"></script>
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+  </head>
+
+  <body class="hold-transition login-page">
+    <script>
+      const initKeycloak = async () => {
+        const keycloak = new Keycloak({
+          url: "http://localhost:8080/",
+          realm: "sso-tenant",
+          clientId: "client1",
+        });
+
+        try {
+          const authenticated = await keycloak.init({
+            onLoad: "login-required",
+            redirectUri: "http://localhost:3000",
+          });
+          if (keycloak.authenticated) {
+            console.log(keycloak);
+            const token = keycloak.token;
+            const refToken = keycloak.refreshToken;
+          }
+          console.log(
+            `User is ${authenticated ? "authenticated" : "not authenticated"}`
+          );
+        } catch (error) {
+          console.error("Failed to initialize adapter:", error);
+        }
+      };
+      initKeycloak().then((r) => console.log("init keycloak successfully", r));
+    </script>
+    <div id="info"></div>
+  </body>
+</html>
