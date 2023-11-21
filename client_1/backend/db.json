@@ -1,0 +1,104 @@
+{
+    "AccountTable": {
+        "index": 1000006,
+        "data": [
+            {
+                "accountId": 1000001,
+                "username": "phule",
+                "password": "123456",
+                "name": "Truong Quang Phu",
+                "avatar": "/uploads/58fee811e912468a9c5a5ee388e83825_cat1.jpg"
+            },
+            {
+                "accountId": 1000002,
+                "username": "accso1",
+                "password": "123456",
+                "name": "Acc so 1",
+                "avatar": "/uploads/58fee811e912468a9c5a5ee388e83825_cat1.jpg"
+            },
+            {
+                "accountId": 1000003,
+                "username": "accso2",
+                "password": "123456",
+                "name": "Acc so 2",
+                "avatar": "/uploads/073a03e0e49c433698a51eb2b4d6fb61_chicken2.jpg"
+            },
+            {
+                "accountId": 1000004,
+                "name": "accso4",
+                "username": "accso4",
+                "password": "123456",
+                "avatar": null
+            },
+            {
+                "accountId": 1000005,
+                "name": "accso5",
+                "username": "accso5",
+                "password": "123456",
+                "avatar": "/uploads/aa4eec8a1c244ad6a1759dffb21d327e_squi1.jpg"
+            },
+            {
+                "accountId": 1000006,
+                "name": "accso6",
+                "username": "accso6",
+                "password": "123456",
+                "avatar": "/uploads/179e91061c014fa39f9d9c4c7186d496_dogandcat.jpg"
+            }
+        ]
+    },
+    "PostTable": {
+        "index": 1000007,
+        "data": [
+            {
+                "postId": 1000001,
+                "accountId": 1000001,
+                "image": "/uploads/ff2dbc4bd0d04f598ff110e63a571573_cat1.jpg",
+                "createdAt": 1700541491855
+            },
+            {
+                "postId": 1000002,
+                "accountId": 1000001,
+                "image": "/uploads/58fee811e912468a9c5a5ee388e83825_cat1.jpg",
+                "createdAt": 1700541501781
+            },
+            {
+                "postId": 1000003,
+                "accountId": 1000006,
+                "image": "/uploads/f987aaa4f93a4e69b5dc501852567f9c_chicken2.jpg",
+                "createdAt": 1700555334730
+            },
+            {
+                "postId": 1000004,
+                "accountId": 1000006,
+                "image": "/uploads/6c3cb3287c0e45f4b42798808d81cce6_cow4.jpg",
+                "createdAt": 1700555578172
+            },
+            {
+                "postId": 1000005,
+                "accountId": 1000006,
+                "image": "/uploads/2ff989272b7540f583bb3dc3be8e9e4f_cow3.jpg",
+                "createdAt": 1700555671089
+            },
+            {
+                "postId": 1000006,
+                "accountId": 1000006,
+                "image": "/uploads/c0115b5f10a24837a18b5171ab76d3fd_spider.jpg",
+                "createdAt": 1700555747292
+            },
+            {
+                "postId": 1000007,
+                "accountId": 1000001,
+                "image": "/uploads/13cd450e540349bd9c2e8e4753d3d0b4_elephant.jpg",
+                "createdAt": 1700556046145
+            }
+        ]
+    },
+    "FollowTable": {
+        "index": 1000000,
+        "data": []
+    },
+    "LikeTable": {
+        "index": 1000000,
+        "data": []
+    }
+}
