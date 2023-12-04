@@ -6,8 +6,7 @@ export const Home = () => {
   return (
     <div className="Home w-full flex flex-col items-center">
       <div className="w-full flex flex-col max-w-[900px]">
-        {/* <ListPost /> */}
-        123
+        <ListPost />
       </div>
     </div>
   );

@@ -2,7 +2,7 @@ import { modalLoginRef, modalRegisterRef, backdropRef, modalCreatePostRef } from
 
 const Utils = {
     global: {
-        accessToken: localStorage.getItem("accessToken")
+        accessToken: null
     },
     wait: (ms) => new Promise(e => setTimeout(e, ms)),
     apiHost: import.meta.env.VITE_API_URL ?? "",

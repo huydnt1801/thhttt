@@ -6,6 +6,7 @@ import Api from "../Api";
 import { thunkGetAccount } from "../slices/Profile";
 import { useParams } from "react-router-dom";
 import { thunkGetHomePost } from "../slices/Home";
+import { thunkGetMe } from "../slices/Account";
 
 const modalCreatePostRef = createRef();
 
@@ -13,8 +14,6 @@ const ModalCreatePost = () => {
 
     const dispatch = useDispatch();
     const { me } = useSelector(state => state.account);
-    console.log(me);
-
     const [open, setOpen] = useState(false);
     const [image, setImage] = useState(null);
 
@@ -38,7 +37,7 @@ const ModalCreatePost = () => {
         Utils.hideBackdrop();
         const response = await Api.Post.createPost(formData);
         if (response.result == "SUCCESS") {
-            dispatch(thunkGetAccount(me.username));
+            dispatch(thunkGetMe());
             dispatch(thunkGetHomePost());
             setOpen(false);
         }

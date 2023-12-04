@@ -7,8 +7,8 @@ import { Provider } from "react-redux";
 import Keycloak from "keycloak-js";
 
 const keycloak = new Keycloak({
-  url: "http://localhost:8080/",
-  realm: "sso-tenant",
+  url: "http://13.213.8.55/",
+  realm: "sso",
   clientId: "instagram",
 });
 

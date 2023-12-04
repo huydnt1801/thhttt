@@ -1,0 +1,259 @@
+{
+    "AccountTable": {
+        "index": 1000001,
+        "data": []
+    },
+    "ConversationTable": {
+        "index": 1000009,
+        "data": [
+            {
+                "conversationId": 1000005,
+                "accountId": "b14c51b7-0504-40c8-8efe-a3b23d820cdd",
+                "avatar": "/uploads/aa48dba13e0340acb8a892c2c48710fd_cow1.jpg",
+                "name": "test 1"
+            },
+            {
+                "conversationId": 1000006,
+                "accountId": "b14c51b7-0504-40c8-8efe-a3b23d820cdd",
+                "avatar": "/uploads/f35eea92fb964bd0a97f94ac434aa366_dog2.jpg",
+                "name": "test 2"
+            },
+            {
+                "conversationId": 1000007,
+                "accountId": "b14c51b7-0504-40c8-8efe-a3b23d820cdd",
+                "avatar": "/uploads/5eae2eb781bb4ff386cf72c7125fd9a5_dog1.jpg",
+                "name": "test3"
+            },
+            {
+                "conversationId": 1000008,
+                "accountId": "82af87ca-b51b-45a7-a5fd-3f4228032f2f",
+                "avatar": "/uploads/d6be0992810447ba821ed621c85e0ed4_95357110_3840671146003785_2721777250000175104_n.jpg",
+                "name": "hoi thoai so 3"
+            },
+            {
+                "conversationId": 1000009,
+                "accountId": "b14c51b7-0504-40c8-8efe-a3b23d820cdd",
+                "avatar": "/uploads/5b73aba7287a425e8576577b4b6e2e16_dog1.jpg",
+                "name": "Hoi nhom v12"
+            }
+        ]
+    },
+    "MemberTable": {
+        "index": 1000011,
+        "data": [
+            {
+                "memberId": 1000003,
+                "accountId": "b14c51b7-0504-40c8-8efe-a3b23d820cdd",
+                "conversationId": 1000005
+            },
+            {
+                "memberId": 1000004,
+                "accountId": "b14c51b7-0504-40c8-8efe-a3b23d820cdd",
+                "conversationId": 1000006
+            },
+            {
+                "memberId": 1000005,
+                "accountId": "b14c51b7-0504-40c8-8efe-a3b23d820cdd",
+                "conversationId": 1000007
+            },
+            {
+                "memberId": 1000006,
+                "accountId": "82af87ca-b51b-45a7-a5fd-3f4228032f2f",
+                "conversationId": 1000008
+            },
+            {
+                "memberId": 1000008,
+                "accountId": "b14c51b7-0504-40c8-8efe-a3b23d820cdd",
+                "conversationId": 1000008
+            },
+            {
+                "memberId": 1000009,
+                "accountId": "82af87ca-b51b-45a7-a5fd-3f4228032f2f",
+                "conversationId": 1000007
+            },
+            {
+                "memberId": 1000010,
+                "accountId": "b14c51b7-0504-40c8-8efe-a3b23d820cdd",
+                "conversationId": 1000009
+            },
+            {
+                "memberId": 1000011,
+                "accountId": "82af87ca-b51b-45a7-a5fd-3f4228032f2f",
+                "conversationId": 1000009
+            }
+        ]
+    },
+    "MessageTable": {
+        "index": 1000024,
+        "data": [
+            {
+                "messageId": 1000001,
+                "conversationId": 1000007,
+                "accountId": "b14c51b7-0504-40c8-8efe-a3b23d820cdd",
+                "content": "Xin chao",
+                "createdAt": 1700618534031
+            },
+            {
+                "messageId": 1000002,
+                "conversationId": 1000007,
+                "accountId": "b14c51b7-0504-40c8-8efe-a3b23d820cdd",
+                "content": "alo alo",
+                "createdAt": 1700619329700
+            },
+            {
+                "messageId": 1000003,
+                "conversationId": 1000007,
+                "accountId": "b14c51b7-0504-40c8-8efe-a3b23d820cdd",
+                "content": "quac",
+                "createdAt": 1700619560007
+            },
+            {
+                "messageId": 1000004,
+                "conversationId": 1000007,
+                "accountId": "b14c51b7-0504-40c8-8efe-a3b23d820cdd",
+                "content": "123213123",
+                "createdAt": 1700619573776
+            },
+            {
+                "messageId": 1000005,
+                "conversationId": 1000007,
+                "accountId": "b14c51b7-0504-40c8-8efe-a3b23d820cdd",
+                "content": "111111",
+                "createdAt": 1700619593240
+            },
+            {
+                "messageId": 1000006,
+                "conversationId": 1000007,
+                "accountId": "b14c51b7-0504-40c8-8efe-a3b23d820cdd",
+                "content": "alo",
+                "createdAt": 1700619647447
+            },
+            {
+                "messageId": 1000007,
+                "conversationId": 1000007,
+                "accountId": "82af87ca-b51b-45a7-a5fd-3f4228032f2f",
+                "content": "hello",
+                "createdAt": 1700619711495
+            },
+            {
+                "messageId": 1000008,
+                "conversationId": 1000007,
+                "accountId": "82af87ca-b51b-45a7-a5fd-3f4228032f2f",
+                "content": "ngon ae",
+                "createdAt": 1700619721340
+            },
+            {
+                "messageId": 1000009,
+                "conversationId": 1000007,
+                "accountId": "b14c51b7-0504-40c8-8efe-a3b23d820cdd",
+                "content": "ok",
+                "createdAt": 1700620341986
+            },
+            {
+                "messageId": 1000010,
+                "conversationId": 1000007,
+                "accountId": "b14c51b7-0504-40c8-8efe-a3b23d820cdd",
+                "content": "alo",
+                "createdAt": 1700620542085
+            },
+            {
+                "messageId": 1000011,
+                "conversationId": 1000007,
+                "accountId": "b14c51b7-0504-40c8-8efe-a3b23d820cdd",
+                "content": "hello",
+                "createdAt": 1700620590142
+            },
+            {
+                "messageId": 1000012,
+                "conversationId": 1000007,
+                "accountId": "82af87ca-b51b-45a7-a5fd-3f4228032f2f",
+                "content": "xin chao",
+                "createdAt": 1700620596362
+            },
+            {
+                "messageId": 1000013,
+                "conversationId": 1000007,
+                "accountId": "82af87ca-b51b-45a7-a5fd-3f4228032f2f",
+                "content": "noi gi di thang ngu",
+                "createdAt": 1700620602885
+            },
+            {
+                "messageId": 1000014,
+                "conversationId": 1000007,
+                "accountId": "b14c51b7-0504-40c8-8efe-a3b23d820cdd",
+                "content": "ngu l me may",
+                "createdAt": 1700620614272
+            },
+            {
+                "messageId": 1000015,
+                "conversationId": 1000007,
+                "accountId": "b14c51b7-0504-40c8-8efe-a3b23d820cdd",
+                "content": "co cl",
+                "createdAt": 1700621225665
+            },
+            {
+                "messageId": 1000016,
+                "conversationId": 1000007,
+                "accountId": "82af87ca-b51b-45a7-a5fd-3f4228032f2f",
+                "content": "hello",
+                "createdAt": 1700622908423
+            },
+            {
+                "messageId": 1000017,
+                "conversationId": 1000007,
+                "accountId": "b14c51b7-0504-40c8-8efe-a3b23d820cdd",
+                "content": "alo",
+                "createdAt": 1700622919754
+            },
+            {
+                "messageId": 1000018,
+                "conversationId": 1000007,
+                "accountId": "82af87ca-b51b-45a7-a5fd-3f4228032f2f",
+                "content": "alo",
+                "createdAt": 1700622944515
+            },
+            {
+                "messageId": 1000019,
+                "conversationId": 1000007,
+                "accountId": "b14c51b7-0504-40c8-8efe-a3b23d820cdd",
+                "content": "hello",
+                "createdAt": 1700622950248
+            },
+            {
+                "messageId": 1000020,
+                "conversationId": 1000009,
+                "accountId": "82af87ca-b51b-45a7-a5fd-3f4228032f2f",
+                "content": "hello",
+                "createdAt": 1700623094697
+            },
+            {
+                "messageId": 1000021,
+                "conversationId": 1000009,
+                "accountId": "82af87ca-b51b-45a7-a5fd-3f4228032f2f",
+                "content": "hello",
+                "createdAt": 1700623102881
+            },
+            {
+                "messageId": 1000022,
+                "conversationId": 1000009,
+                "accountId": "b14c51b7-0504-40c8-8efe-a3b23d820cdd",
+                "content": "xin chao",
+                "createdAt": 1700623122200
+            },
+            {
+                "messageId": 1000023,
+                "conversationId": 1000009,
+                "accountId": "b14c51b7-0504-40c8-8efe-a3b23d820cdd",
+                "content": "alo",
+                "createdAt": 1700623845873
+            },
+            {
+                "messageId": 1000024,
+                "conversationId": 1000009,
+                "accountId": "82af87ca-b51b-45a7-a5fd-3f4228032f2f",
+                "content": "xin chao",
+                "createdAt": 1700623856244
+            }
+        ]
+    }
+}

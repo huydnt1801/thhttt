@@ -35,17 +35,18 @@ const authentication = async (req, res, next) => {
     }
     const { error, data } = Service.JWT.verifyAccessToken(token);
     if (error) {
-        console.log(error);
         if (error.message == TOKEN_ERROR.TOKEN_EXPIRED) {
             return res.status(401).json({
                 result: "FAIL",
-                message: ["Token expired"]
+                message: ["Token expired"],
+                error: error
             });
         }
         else if (error.message == TOKEN_ERROR.TOKEN_INVALID) {
             return res.status(401).json({
                 result: "FAIL",
-                message: ["Invalid token"]
+                message: ["Invalid token"],
+                error: error
             });
         }
         else return res.status(401).json({

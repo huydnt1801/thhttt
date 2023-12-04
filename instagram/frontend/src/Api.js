@@ -47,7 +47,11 @@ const login = (data) => {
 /**@type {import("./types/api").me} */
 const getMe = () => {
     const url = `/auth/me`;
-    return base.get(url);
+    return base.get(url, {
+        headers: {
+            Authorization: Utils.global.accessToken ? `Bearer ${Utils.global.accessToken}` : undefined
+        }
+    });
 }
 /**@type {import("./types/api").getAccount} */
 const getAccount = (username) => {
@@ -63,7 +67,11 @@ const getListPost = (data) => {
 
 const createPost = (data) => {
     const url = `/post/create`;
-    return base.post(url, data);
+    return base.post(url, data, {
+        headers: {
+            Authorization: Utils.global.accessToken ? `Bearer ${Utils.global.accessToken}` : undefined
+        }
+    });
 }
 
 const Api = {

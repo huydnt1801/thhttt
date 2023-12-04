@@ -1,95 +1,82 @@
 {
     "AccountTable": {
-        "index": 1000006,
-        "data": [
-            {
-                "accountId": 1000001,
-                "username": "phule",
-                "password": "123456",
-                "name": "Truong Quang Phu",
-                "avatar": "/uploads/58fee811e912468a9c5a5ee388e83825_cat1.jpg"
-            },
-            {
-                "accountId": 1000002,
-                "username": "accso1",
-                "password": "123456",
-                "name": "Acc so 1",
-                "avatar": "/uploads/58fee811e912468a9c5a5ee388e83825_cat1.jpg"
-            },
-            {
-                "accountId": 1000003,
-                "username": "accso2",
-                "password": "123456",
-                "name": "Acc so 2",
-                "avatar": "/uploads/073a03e0e49c433698a51eb2b4d6fb61_chicken2.jpg"
-            },
-            {
-                "accountId": 1000004,
-                "name": "accso4",
-                "username": "accso4",
-                "password": "123456",
-                "avatar": null
-            },
-            {
-                "accountId": 1000005,
-                "name": "accso5",
-                "username": "accso5",
-                "password": "123456",
-                "avatar": "/uploads/aa4eec8a1c244ad6a1759dffb21d327e_squi1.jpg"
-            },
-            {
-                "accountId": 1000006,
-                "name": "accso6",
-                "username": "accso6",
-                "password": "123456",
-                "avatar": "/uploads/179e91061c014fa39f9d9c4c7186d496_dogandcat.jpg"
-            }
-        ]
+        "index": 1000000,
+        "data": []
     },
     "PostTable": {
-        "index": 1000007,
+        "index": 1000012,
         "data": [
             {
                 "postId": 1000001,
-                "accountId": 1000001,
-                "image": "/uploads/ff2dbc4bd0d04f598ff110e63a571573_cat1.jpg",
-                "createdAt": 1700541491855
+                "accountId": "b14c51b7-0504-40c8-8efe-a3b23d820cdd",
+                "image": "/uploads/cc64e4f6034349d9b18d0c718cb91c32_cat1.jpg",
+                "createdAt": 1700589556795
             },
             {
                 "postId": 1000002,
-                "accountId": 1000001,
-                "image": "/uploads/58fee811e912468a9c5a5ee388e83825_cat1.jpg",
-                "createdAt": 1700541501781
+                "accountId": "b14c51b7-0504-40c8-8efe-a3b23d820cdd",
+                "image": "/uploads/32cc60bcd72246d999a4b9ad0afad2a5_squi1.jpg",
+                "createdAt": 1700591998969
             },
             {
                 "postId": 1000003,
-                "accountId": 1000006,
-                "image": "/uploads/f987aaa4f93a4e69b5dc501852567f9c_chicken2.jpg",
-                "createdAt": 1700555334730
+                "accountId": "b14c51b7-0504-40c8-8efe-a3b23d820cdd",
+                "image": "/uploads/8a6fa1de578e452283d53c985a6a1e42_cow5.jpg",
+                "createdAt": 1700592606679
             },
             {
                 "postId": 1000004,
-                "accountId": 1000006,
-                "image": "/uploads/6c3cb3287c0e45f4b42798808d81cce6_cow4.jpg",
-                "createdAt": 1700555578172
+                "accountId": "b14c51b7-0504-40c8-8efe-a3b23d820cdd",
+                "image": "/uploads/ed329f942d50434ea6c622fb1b3111db_dogandcat2.jpg",
+                "createdAt": 1700596927245
             },
             {
                 "postId": 1000005,
-                "accountId": 1000006,
-                "image": "/uploads/2ff989272b7540f583bb3dc3be8e9e4f_cow3.jpg",
-                "createdAt": 1700555671089
+                "accountId": "b14c51b7-0504-40c8-8efe-a3b23d820cdd",
+                "image": "/uploads/5278833829d249eca6c5f3b137477119_6f1e4da0077c7819cffcb0a45debc4c9.jpg",
+                "createdAt": 1700597332043
             },
             {
                 "postId": 1000006,
-                "accountId": 1000006,
-                "image": "/uploads/c0115b5f10a24837a18b5171ab76d3fd_spider.jpg",
-                "createdAt": 1700555747292
+                "accountId": "b14c51b7-0504-40c8-8efe-a3b23d820cdd",
+                "image": "/uploads/5278833829d249eca6c5f3b137477119_6f1e4da0077c7819cffcb0a45debc4c9.jpg",
+                "createdAt": 1700597337638
             },
             {
                 "postId": 1000007,
-                "accountId": 1000001,
-                "image": "/uploads/13cd450e540349bd9c2e8e4753d3d0b4_elephant.jpg",
-                "createdAt": 1700556046145
+                "accountId": "82af87ca-b51b-45a7-a5fd-3f4228032f2f",
+                "image": "/uploads/b56bfee1d7e7498bab161572e04104b2_89766419_829543024211282_2954716807048462336_o.jpg",
+                "createdAt": 1700597393663
+            },
+            {
+                "postId": 1000008,
+                "accountId": "82af87ca-b51b-45a7-a5fd-3f4228032f2f",
+                "image": "/uploads/63f8131e0f544068a63065e4d57483f9_90617458_226010285257972_8854669645911687168_n.jpg",
+                "createdAt": 1700597402314
+            },
+            {
+                "postId": 1000009,
+                "accountId": "82af87ca-b51b-45a7-a5fd-3f4228032f2f",
+                "image": "/uploads/0f09254b05654a7b90a358f346a398da_90620869_10220390704573698_3596848403876675584_n.jpg",
+                "createdAt": 1700597408631
+            },
+            {
+                "postId": 1000010,
+                "accountId": "82af87ca-b51b-45a7-a5fd-3f4228032f2f",
+                "image": "/uploads/3f292d30532a491f93453f543fbfcbb1_95357110_3840671146003785_2721777250000175104_n.jpg",
+                "createdAt": 1700597414936
+            },
+            {
+                "postId": 1000011,
+                "accountId": "82af87ca-b51b-45a7-a5fd-3f4228032f2f",
+                "image": "/uploads/0aca3d8581254a4cbc23588e0452cb12_FB_IMG_15846020279126353.jpg",
+                "createdAt": 1700597423504
+            },
+            {
+                "postId": 1000012,
+                "accountId": "e8c58161-71dd-4728-885e-35e11b14ab05",
+                "image": "/uploads/21d331466f0f40b784922c32cf0d8385_image (1).png",
+                "createdAt": 1701157931541
             }
         ]
     },

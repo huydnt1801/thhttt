@@ -4,6 +4,7 @@ import { twMerge } from "tailwind-merge"
 import { Link } from "react-router-dom";
 import { useSelector } from "react-redux";
 import Utils from "../Utill";
+import { useKeycloak } from "@react-keycloak/web";
 
 export const NavBar = () => {
 
@@ -37,12 +38,13 @@ export const NavBar = () => {
 
 const ProfileButton = () => {
     const { me } = useSelector(state => state.account);
+    const { keycloak } = useKeycloak();
 
     if (me) {
         return (
             <Link
                 className={twMerge(cx.row, "md:py-4")}
-                to={`/${me.username}`}>
+                to={`/@me`}>
                 <Avatar
                     alt="Remy Sharp"
                     className="xl:!ml-1"
@@ -53,7 +55,7 @@ const ProfileButton = () => {
         )
     }
     return (
-        <div className={cx.row} onClick={() => Utils.showModalLogin()}>
+        <div className={cx.row} onClick={keycloak.login}>
             <IconButton>
                 <LoginOutlined />
             </IconButton>

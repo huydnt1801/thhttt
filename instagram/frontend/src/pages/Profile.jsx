@@ -1,10 +1,11 @@
 import { Button } from "@mui/material"
 import { useEffect } from "react"
 import { useDispatch, useSelector } from "react-redux"
-import { useParams } from "react-router-dom"
+import { useNavigate, useParams } from "react-router-dom"
 import { thunkGetAccount } from "../slices/Profile"
 import Utils from "../Utill"
 import { setMe } from "../slices/Account"
+import { useKeycloak } from "@react-keycloak/web"
 
 
 export const Profile = () => {
@@ -23,23 +24,20 @@ const Head = () => {
 
     const dispatch = useDispatch();
     const { username } = useParams();
+    const navigate = useNavigate();
+    const { keycloak } = useKeycloak();
 
-    const { account } = useSelector(state => state.profile);
     const { me } = useSelector(state => state.account);
-    const isMe = (() => {
-        if (account) {
-            if (me) {
-                return account.username == me.username
-            } else { return false }
-        }
-        else { return false }
-    })();
-    console.log(account, username);
+    const listPost = me ? me.posts : [];
+    const isMe = true;
 
     useEffect(() => {
-        dispatch(thunkGetAccount(username));
-    }, [username]);
-    console.log(account);
+        // setTimeout(() => {
+        //     if (!me) {
+        //         navigate("/");
+        //     }
+        // }, 2000)
+    }, []);
 
     return (
         <div className="flex flex-row mt-8">
@@ -47,12 +45,12 @@ const Head = () => {
                 <div className="w-[120px] h-[120px] md:w-[150px] md:h-[150px]">
                     <img
                         className="w-[120px] h-[120px] md:w-[150px] md:h-[150px] object-cover bg-no-repeat rounded-full"
-                        src={account?.avatar} />
+                        src={me?.avatar} />
                 </div>
             </div>
             <div className="flex-1 flex flex-col ml-8">
                 <div className="flex flex-col md:flex-row md:items-center">
-                    <div className="mr-4">{account?.username}</div>
+                    <div className="mr-4">{me?.preferred_username}</div>
                     <div className="flex flex-row items-center mt-3 md:mt-0">
                         {isMe ? <>
                             <Button
@@ -69,9 +67,9 @@ const Head = () => {
                                 variant="outlined"
                                 sx={{ textTransform: "none", }}
                                 onClick={() => {
-                                    localStorage.removeItem("accessToken");
-                                    localStorage.removeItem("refreshToken");
-                                    dispatch(setMe(null));
+                                    keycloak.logout({ redirectUri: "http://localhost:6300" })
+                                    // dispatch(setMe(null));
+                                    // Utils.global.accessToken = null;
                                 }}>
                                 Log Out
                             </Button>
@@ -95,19 +93,19 @@ const Head = () => {
                 </div>
                 <div className="flex flex-row items-center mt-4">
                     <div className="flex flex-col items-center md:flex-row">
-                        <div className="font-bold mr-1">0</div>
+                        <div className="font-bold mr-1">{listPost.length}</div>
                         <div> posts</div>
                     </div>
                     <div className="flex flex-col items-center md:flex-row ml-6">
-                        <div className="font-bold mr-1">10</div>
+                        <div className="font-bold mr-1">0</div>
                         <div> followers</div>
                     </div>
                     <div className="flex flex-col items-center md:flex-row ml-6">
-                        <div className="font-bold mr-1">10</div>
+                        <div className="font-bold mr-1">0</div>
                         <div> following</div>
                     </div>
                 </div>
-                <div className="mt-2 font-semibold">{account?.name}</div>
+                <div className="mt-2 font-semibold">{me?.name}</div>
             </div>
         </div>
     )
@@ -115,8 +113,8 @@ const Head = () => {
 
 const Posts = () => {
 
-    const { listPost } = useSelector(state => state.profile);
-    console.log(listPost);
+    const { me } = useSelector(state => state.account);
+    const listPost = me ? me.posts : [];
 
     return (
         <div className="grid grid-cols-3 gap-1 mt-10">
